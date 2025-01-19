@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ToDoList.Views"
+             xmlns:models="clr-namespace:ToDoList.Models"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="450">
     <Grid>
@@ -13,11 +14,30 @@
             <!-- Add Button -->
             <RowDefinition Height="Auto"/>
             <!-- To Do List -->
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" Style="{StaticResource HeaderBorderStyle}">
             <TextBlock Text="To-Do List" Style="{StaticResource HeaderTextBlockStyle}"/>
         </Border>
+
+        <Button Grid.Row="1" Content="Add" Style="{StaticResource PrimaryButtonStyle}" Margin="0,10,0,0" Width="400"/>
+
+        <ListView Grid.Row="2" Background="#6C55C1" Width="400" Height="600" Margin="0,10,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Style="{StaticResource HeaderBorderStyle}" Margin="5" Padding="5" Width="380">
+                        <TextBlock Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Foreground="White"/>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type models:ToDoItem}">
+                    <models:ToDoItem Title="Task 1"/>
+                    <models:ToDoItem Title="Task 2"/>
+                    <models:ToDoItem Title="Task 3"/>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
     </Grid>
 </UserControl>

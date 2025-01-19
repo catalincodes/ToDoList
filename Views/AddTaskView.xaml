@@ -39,8 +39,7 @@
             </Border>
         </Border>
 
-        <Button Grid.Row="2" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                Margin="0,25,0,0" Style="{StaticResource PrimaryButtonStyle}"/>
+        <Button Grid.Row="2" Content="Add" Style="{StaticResource PrimaryButtonStyle}" Margin="0,25,0,0"/>
 
     </Grid>
 </UserControl>
