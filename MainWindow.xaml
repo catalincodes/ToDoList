@@ -6,8 +6,8 @@
         xmlns:views="clr-namespace:ToDoList.Views"
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="450">
-    <Grid>
+        Title="To-Do List" Height="800" Width="450" Background="#CAEDFF">
+    <Grid Margin="0 25 0 0">
         <views:AddTaskView></views:AddTaskView>
     </Grid>
 </Window>

@@ -4,6 +4,38 @@
              xmlns:local="clr-namespace:ToDoList"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Common Button Style -->
+        <Style x:Key="CommonButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="55"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="1" 
+                                CornerRadius="25">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Primary Button Style -->
+        <Style x:Key="PrimaryButtonStyle" BasedOn="{StaticResource CommonButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="Navy"/>
+            <Setter Property="BorderBrush" Value="#6C55C1"/>
+        </Style>
+
+        <!-- Secondary(Delete) Button Style -->
+        <Style x:Key="SecondaryButtonStyle" BasedOn="{StaticResource CommonButtonStyle}" TargetType="Button">
+            <Setter Property="Background" Value="Red"/>
+            <Setter Property="BorderBrush" Value="DarkRed"/>
+        </Style>
     </Application.Resources>
 </Application>

@@ -16,7 +16,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Background="#A3BDDB" CornerRadius="25" Width="400" Height="80" Margin="0,25,0,0">
+        <Border Grid.Row="0" Background="#A3BDDB" CornerRadius="25" Width="400" Height="80" Margin="0,0,0,0">
             <TextBlock Text="Add Task" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="0,0,0,0" Width="120"  Height="40" FontWeight="Bold" FontFamily="Verdana"/>
         </Border>
 
@@ -37,26 +37,8 @@
             </Border>
         </Border>
 
-        <Button Grid.Row="2" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" 
-                Margin="0,25,0,0" Width="120"  Height="55" FontWeight="Bold" FontFamily="Verdana" 
-                Background="Black" Foreground="White" BorderBrush="#6C55C1">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="Button">
-                                <Border Background="{TemplateBinding Background}" 
-                                        BorderBrush="{TemplateBinding BorderBrush}" 
-                                        BorderThickness="1" 
-                                        CornerRadius="25">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Style>
-        </Button>
+        <Button Grid.Row="2" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Margin="0,25,0,0" Style="{StaticResource PrimaryButtonStyle}"/>
 
     </Grid>
 </UserControl>
