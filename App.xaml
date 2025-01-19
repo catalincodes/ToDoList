@@ -37,5 +37,10 @@
             <Setter Property="Background" Value="Red"/>
             <Setter Property="BorderBrush" Value="DarkRed"/>
         </Style>
+
+        <!-- Global TextBox Style -->
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="5 0"/>
+        </Style>
     </Application.Resources>
 </Application>

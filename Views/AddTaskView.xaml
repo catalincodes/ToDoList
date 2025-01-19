@@ -22,9 +22,11 @@
 
         <Border Grid.Row="1" Background="#6C55C1" CornerRadius="25" Width="400" Height="80" Margin="0,25,0,0">
             <Border Background="#A3BDDB" CornerRadius="25" Padding="0">
-                <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="0,0,0,0" Width="380"  Height="50" FontFamily="Calibri" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <TextBox VerticalAlignment="Center"
+                         FontSize="24" Width="380"  Height="50" FontFamily="Calibri" 
+                         VerticalContentAlignment="Center">
                     <TextBox.Style>
-                        <Style TargetType="TextBox">
+                        <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
                             <Setter Property="Background" Value="Transparent"/>
                             <Style.Triggers>
                                 <Trigger Property="IsFocused" Value="True">
