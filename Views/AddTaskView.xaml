@@ -16,8 +16,8 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Background="#A3BDDB" CornerRadius="25" Width="400" Height="80" Margin="0,0,0,0">
-            <TextBlock Text="Add Task" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Margin="0,0,0,0" Width="120"  Height="40" FontWeight="Bold" FontFamily="Verdana"/>
+        <Border Grid.Row="0" Style="{StaticResource HeaderBorderStyle}">
+            <TextBlock Text="Add Task" Style="{StaticResource HeaderTextBlockStyle}"/>
         </Border>
 
         <Border Grid.Row="1" Background="#6C55C1" CornerRadius="25" Width="400" Height="80" Margin="0,25,0,0">

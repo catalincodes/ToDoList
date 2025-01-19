@@ -4,6 +4,25 @@
              xmlns:local="clr-namespace:ToDoList"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- Header Border Style -->
+        <Style x:Key="HeaderBorderStyle" TargetType="Border">
+            <Setter Property="Background" Value="#A3BDDB"/>
+            <Setter Property="CornerRadius" Value="25"/>
+            <Setter Property="Width" Value="400"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+        </Style>
+        <!-- Header TextBlock Style -->
+        <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
         <!-- Common Button Style -->
         <Style x:Key="CommonButtonStyle" TargetType="Button">
             <Setter Property="FontSize" Value="24"/>
