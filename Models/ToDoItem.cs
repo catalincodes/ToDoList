@@ -9,23 +9,23 @@ namespace ToDoList.Models
 	public class ToDoItem
 	{
 		public required Guid Id { get; set; }
-		public string Title { get; set; } = "";
-		public string Description { get; set; } = "";
+		public string Title { get; set; } = string.Empty;
+		public string Description { get; set; } = string.Empty;
 		public bool IsDone { get; set; }
 		public DateTime DueDate { get; set; }
 
 		public override bool Equals(object? obj)
 		{
-			return obj is ToDoItem item &&
-				   Title == item.Title &&
-				   Description == item.Description &&
-				   IsDone == item.IsDone &&
-				   DueDate == item.DueDate;
+			if (obj is ToDoItem item)
+			{
+				return Id == item.Id;
+			}
+			return false;
 		}
 
 		public override int GetHashCode()
 		{
-			return base.GetHashCode();
+			return Id.GetHashCode();
 		}
 	}
 }

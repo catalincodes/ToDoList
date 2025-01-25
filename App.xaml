@@ -22,6 +22,15 @@
             <Setter Property="FontFamily" Value="Verdana"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
+        <Style x:Key="ToDoDescription" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
 
         <!-- Common Button Style -->
         <Style x:Key="CommonButtonStyle" TargetType="Button">
