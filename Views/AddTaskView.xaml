@@ -3,9 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ToDoList.Views"
              xmlns:viewModels="clr-namespace:ToDoList.ViewModels"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="620" d:DesignWidth="450">
     <UserControl.DataContext>
@@ -93,6 +91,7 @@
         <Label Grid.Row="5" Content="Date/Time:" HorizontalAlignment="Left"
                Margin="40 20 0 0" FontFamily="Cambria" FontSize="20"/>
 
+        <!-- Date/Time Pickers -->
         <Grid Grid.Row="6" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -129,8 +128,8 @@
                 <ComboBoxItem Content="23:00"/>
             </ComboBox>
         </Grid>
-
-        <Button Grid.Row="7" Content="Add" Style="{StaticResource PrimaryButtonStyle}" Margin="0,25,0,0"/>
-
+        
+        <Button Grid.Row="7" Content="Add" Style="{StaticResource PrimaryButtonStyle}" 
+                Margin="0,25,0,0"/>
     </Grid>
 </UserControl>

@@ -2,26 +2,21 @@
 {
 	public class ToDoCollection
 	{
-		public readonly List<ToDoItem> Items;
-
-		public ToDoCollection()
-		{
-			Items = new List<ToDoItem>();
-		}
+		private readonly List<ToDoItem> _items = new();
 
 		public IEnumerable<ToDoItem> GetItems()
 		{
-			return Items;
+			return _items;
 		}
 
 		public void AddItem(ToDoItem item)
 		{
-			Items.Add(item);
+			_items.Add(item);
 		}
 
 		public void RemoveItem(ToDoItem item)
 		{
-			Items.Remove(item);
+			_items.Remove(item);
 		}
 	}
 }
