@@ -1,6 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using ToDoList.Commands;
@@ -17,11 +16,17 @@ namespace ToDoList.ViewModels
 
 		public ToDoListDisplayViewModel()
 		{
-			Debug.WriteLine("ToDoListDisplayViewModel instantiated");
-
 			OpenAddTaskViewCommand = new DelegateCommand(
-				_ => OpenAddTaskView(), canExecute: _ => true
-				);
+				_ =>
+				{
+					OpenAddTaskView();
+				},
+				_ =>
+				{
+					return true;
+				}
+			);
+
 			ToDoItems = new ObservableCollection<ToDoItem>
 				{
 					new ToDoItem
@@ -50,10 +55,8 @@ namespace ToDoList.ViewModels
 
 		private void OpenAddTaskView()
 		{
-			Debug.WriteLine("Open Add Task View");
 			var addTaskWindow = new AddTaskWindow();
 			addTaskWindow.ShowDialog();
-			// Open Add Task View
 		}
 
 		public event PropertyChangedEventHandler? PropertyChanged;
